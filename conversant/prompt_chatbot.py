@@ -47,6 +47,23 @@ PERSONA_JSON_SCHEMA = {
     },
 }
 
+class RandomChatbot(Chatbot):
+    """Just to test out the workflow actions.
+    
+    """
+    def __init__(
+        self,
+        client: cohere.Client,
+        prompt: Prompt):
+        """ Can i see this in build doc??
+        
+        Args:
+            client (cohere.Client): Cohere client for API
+            prompt (Prompt): Prompt object to direct behavior.
+            random_thing (str, optional): this will hopefully break the workflow.
+        
+        """
+        super().__init__(client)
 
 class PromptChatbot(Chatbot):
     """Use prompt templates and LLM generation to define a chatbot.
