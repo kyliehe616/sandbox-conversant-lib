@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-          cache: 'pip'
+          cache: ''
       - run: echo ${{ matrix.python-version }}
       - run: echo ${{ hashFiles('**/poetry.lock') }}
       - name: Install Poetry
