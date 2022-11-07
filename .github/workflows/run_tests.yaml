@@ -28,6 +28,7 @@ jobs:
         run: poetry install --no-interaction --no-root --no-cache
       - name: Install library
         run: poetry install --no-interaction --no-cache
+      - run: echo venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
       - name: Run tests
         run: |
           source .venv/bin/activate
