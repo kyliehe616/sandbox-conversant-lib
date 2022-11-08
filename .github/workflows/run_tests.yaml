@@ -29,7 +29,7 @@ jobs:
       - name: Install library
         run: poetry install --no-interaction --no-cache
       - run: echo venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
-      - run: echo ${{ cache-dir }}
+      - run: echo $POETRY_VIRTUALENVS_PATH
 
       - name: Run tests
         run: |
